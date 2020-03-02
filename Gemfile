@@ -47,3 +47,5 @@ gem 'html-proofer'
 group :jekyll_plugins do
   gem 'jekyll-commonmark-ghpages'
 end
+
+gem "nokogiri", ">= 1.10.8"
