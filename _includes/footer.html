@@ -1,0 +1,27 @@
+<footer class="footer">
+<div class="container">
+    <div class="bottom_footer">
+        <div class="footer-friends">
+            <nav>
+                <ul class="menu">
+                    {% for friend in site.data.friends %}
+                        {% if friend.enable %}<li><a href="{{friend.href}}" target="_blank">{{friend.name}}</a></li>{% endif %}
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-copyright col-xs-12 col-md-6">
+            <p class="copyright">Copyright &copy; {{ site.name }} {{ site.time | date: '%Y' }} |
+                    Powered by <a href="{{ site.author.github }}" target="_blank">{{ site.author.name }}</a></p>
+        </div>
+        <div class="footer-social">
+            <ul class="nav-social">
+                {% assign socials = site.data.socials | where: "enable", true %}
+                {% for social in socials %}
+                <li><a class="fa fa-{{social.name}}" href="{{social.href}}" target="_blank" title="{{social.title}}">{{social.content}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+</footer>

@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<!-- Header -->
+{% include docs/header.html %}
+
+<div class="wrapper right-open">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-body">
+                <!-- main content -->
+                <main id="content" class="col-content content">
+                    <section class="section">
+                        <h1>{{ page.title }}</h1>
+
+                        {{ content }}
+
+                        {% comment %}{% include docs/link-corrections.html %}{% endcomment %}
+
+                        <!-- pagination -->
+                        {% if page.previous_page or page.next_page %}
+                        <ul id="page" class="pagination">
+                            {% if page.previous_page %}<li class="previsou-page"><a href="part1">&lt;&lt; Previous</a></li>{%endif%}
+                            {% if page.next_page %}<li class="next-page"><a href="part2">Next &gt;&gt;</a></li>{%endif%}
+                        </ul>
+                        {% endif %}
+                    </section>
+                </main>
+                <!-- Leftbar Menu -->
+                {% include docs/leftbar.html %}
+                <!-- Rightbar TOC -->
+                {% include docs/rightbar.html %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}
