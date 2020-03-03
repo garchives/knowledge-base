@@ -6,7 +6,7 @@
             <div class="nav-container">
                 <div id="tabs">
                     <ul class="tabs">
-                        {% assign categories = site.data.categories | where: "enable", true %}
+                        {% assign categories = site.data.summary | where: "enable", true %}
                         {% for nav in categories %}
                         <li><a href="{{ nav.id | prepend: '#' | relative_url }}" style="color: white">{{ nav.name }}</a></li>
                         {% endfor %}

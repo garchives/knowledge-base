@@ -1,19 +1,12 @@
 ---
-layout: home
+layout: default
 description: 知识库，Knowledge Base
 keywords: 知识库，Knowledge Base
-landing: true
-title: ""
-notoc: true
-notags: true
-nomenu: true
-notoc: true
-skip_read_time: true
 ---
 {% assign page.title = site.name %}
 
 <div class="component-container">
-    {% assign categories = site.data.categories | where: "enable", "true" %}
+    {% assign categories = site.data.summary | where: "enable", "true" %}
     {% for category in categories %}
         <h2 id="{{ category.id }}" class="text-center">{{ category.name }}</h2>
         {% if category.children %}

@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>{{ page.title }} | {{ site.name }}</title>
+	<title>{{ site.name }}</title>
 	<meta name="description" content="{{ page.description }}" />
 	<meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
 	<link rel="canonical" href="{{ page.url }}" />
@@ -16,7 +16,7 @@
 
 	<link rel="stylesheet" href="{{ '_assets/css/font-awesome.min.css' | relative_url }}">
 	<link rel="stylesheet" href="{{ '_assets/css/bootstrap.min.css' | relative_url }}">
-	<link id="pygments" rel="stylesheet" href="{{ '_assets/css/highlight.css' | relative_url }}">
+	<!-- <link id="pygments" rel="stylesheet" href="{{ '_assets/css/highlight.css' | relative_url }}"> -->
 	<link id="pagestyle" rel="stylesheet" href="{{ '_assets/css/style.css' | relative_url }}">
 
 	<!-- "Open Sans" font from Google -->
@@ -26,7 +26,7 @@
 	<meta property="og:title" content="{{ page.title }}" />
 	<meta property="og:description" content="{{ page.description }}" />
 	<meta property="og:type" content="website"/>
-	<meta property="og:image" content="/favicons/docs@2x.ico"/>
+	<meta property="og:image" content="{{ 'favicon.ico' | relative_url }}"/>
 	<meta property="og:updated_time" itemprop="dateUpdated" content="{% if page.date %}{{ page.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}"/>
 	<meta property="og:url" content="{{ page.url | absolute_url }}" />
 	<meta property="og:locale" content="en_US" />
@@ -54,17 +54,21 @@
 </head>
 
 <body ng-app="Docker" ng-controller="DockerController" class="colums">
-    {{ content }}
+    <!-- Header -->
+	{% include header.html %}
 
-	<!-- <script src="_assets/js/anchorlinks.js"></script> -->
-	<script defer src="{{ '_assets/js/menu.js' | relative_url }}"></script>
-	<script src="{{ '_assets/js/jquery.js' | relative_url }}"></script>
-	<script src="{{ '_assets/js/bootstrap.min.js' | relative_url }}"></script>
-	<script src="{{ '_assets/js/stickyfill.min.js' | relative_url }}"></script>
-	<script defer src="{{ '_assets/js/metadata.js' | relative_url }}"></script>
-	{% if page.layout == "docs" %}<script defer src="{{ '_assets/js/docs.js' | relative_url }}"></script>{% endif %}
-	<script src="{{ '_assets/js/smooth-scroll.min.js' | relative_url }}"></script>
-	<script language="javascript">jQuery(document).ready(function(){hookupTOCEvents();});</script>
+	<div class="wrapper right-open">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-body">
+					<!-- main content -->
+					<main class="col-content content" style="max-width: none">{{ content }}</main>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% include footer.html %}
 </body>
 
 </html>

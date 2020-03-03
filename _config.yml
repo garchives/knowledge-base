@@ -1,4 +1,4 @@
-url: https://kibi.io
+url: https://githome.io
 baseurl: "/knowledge-base" # It's the default
 
 name: 知识库
@@ -34,71 +34,11 @@ exclude:
   - vendor
 
 plugins:
-  - jekyll-redirect-from
-  - jekyll-relative-links
   - jekyll-sitemap
-  - jekyll-readme-index
-
-# Front matter defaults
-defaults:
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: docs
-      toc_min: 2
-      toc_max: 3
-      tree: true
-      permalink: /:path/:basename:output_ext
-  - scope:
-      path: "algostructure/algorithms"
-      types: pages
-    values:
-      source: "algostructure/algorithms/"
-      bookid: algorithms
-      bookname: "《经典算法》"
-      permalink: /algorithms/:subpath/:basename:output_ext
-  - scope:
-      path: "algostructure/structures"
-      types: pages
-    values:
-      source: "algostructure/structures/"
-      bookid: data-structure
-      bookname: "《数据结构》"
-      permalink: /data-structure/:subpath/:basename:output_ext
-  - scope:
-      path: "os/linux/cmds"
-      types: pages
-    values:
-      source: "os/linux/cmd/"
-      bookid: linux-commands
-      bookname: "《Linux 命令行》"
-      permalink: /linux-commands/:basename:output_ext
-  - scope:
-      path: "git"
-      type: pages
-    values:
-      source: "git/"
-      bookid: git
-      bookname: "《Git 知识库》"
-      permalink: /:path/:basename:output_ext
-  - scope:
-      path: "git/platforms/github"
-      type: pages
-    values:
-      source: "git/platforms/github/"
-      bookid: github
-      bookname: "《GitHub》"
-      permalink: /github/:subpath/:basename:output_ext
 
 sass:
   sass_dir: _scss
   style: :compressed
-
-readme_index:
-  enabled: false
-  remove_originals: true
-  with_frontmatter: false
 
 #============================= more settings =============================#
 
