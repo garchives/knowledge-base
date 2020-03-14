@@ -1,7 +1,7 @@
 # 首页展示时使用
 # 页脚展示 「相关」内容
 
-- id: computer-science
+- id: cs
   enable: false
   name: CS 基础
   icon: ""
@@ -26,38 +26,50 @@
   name: 程序设计
   icon: ""
   children:
+    - id: pl
+      url: https://githome.io/computer-language/
+      enable: true
+      title: PL
+      avatar: pl.png
     - id: clang
       url: https://githome.io/clang/
-      enable: false
-      title: C 语言
+      enable: true
+      title: C
       avatar: clang.png
     - id: golang
       url: https://githome.io/golang/
       enable: true
-      title: GoLang
+      title: Golang
       avatar: golang.png
-    - id: java
-      url: https://githome.io/java/
-      enable: true
-      title: Java
-      avatar: java.png
-    - id: javascript
-      enable: false
-      title: JavaScript
-      avatar: javascript.png
     - id: python
       url: https://githome.io/python/
       enable: true
       title: Python
       avatar: python.png
+    - id: scala
+      url: https://githome.io/scala/
+      enable: true
+      title: Scala
+      avatar: scala.png
+    - id: java
+      url: https://githome.io/java/
+      enable: true
+      title: Java
+      avatar: java.png
+    - id: shell
+      url: https://githome.io/shell/
+      enable: true
+      title: Shell
+      avatar: shell.png
+      description: Linux 命令行、Shell 脚本语言
     - id: rust
       enable: false
       title: Rust
       avatar: rust.svg
-    - id: scala
+    - id: javascript
       enable: false
-      title: Scala
-      avatar: scala.png
+      title: JavaScript
+      avatar: javascript.png
     - id: typescript
       enable: false
       title: TypeScript
@@ -72,11 +84,12 @@
       title: Linux 操作系统
       avatar: linux.png
       description: 进程、驱动、文件系统、内存管理
-    - id: linux-commands
-      enable: false
-      title: Linux 命令行
-      avatar: linux-commands.png
-      description: ls、find、sed ...
+    - id: shell
+      url: https://githome.io/shell/
+      enable: true
+      title: Shell
+      avatar: shell.png
+      description: Linux 命令行、Shell 脚本语言
     - id: linux-distros
       enable: false
       title: Linux 发行版
@@ -97,6 +110,12 @@
       title: Linux 系统调用
       avatar: linux-syscalls.png
       description: 进程、文件系统、设备驱动
+    - id: procfs
+      url: https://githome.io/procfs/
+      enable: true
+      title: Procfs
+      avatar: procfs.png
+      description: Linux 特有的伪文件系统
     - id: git
       url: https://githome.io/git/
       enable: true
@@ -188,13 +207,29 @@
       title: 深度学习
       avatar: deep-learning.jpeg
       description: 神经网络
-- id: block-chain
+- id: network
   enable: false
-  name: 区块链
+  name: 网络
   icon: ""
+  children:
+    - id: http
+      enable: false
+      title: HTTP
+      avatar: http.png
+      description: 超文本传输协议
 - id: web
   enable: false
   name: Web # 子类
+  icon: ""
+  children:
+    - id: http
+      enable: false
+      title: HTTP
+      avatar: http.png
+      description: 超文本传输协议
+- id: block-chain
+  enable: false
+  name: 区块链
   icon: ""
 - id: tools
   enable: false
