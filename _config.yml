@@ -5,9 +5,7 @@ name: 知识库
 name_en: Knowledge Base
 title: 知识库 - Knowledge Base
 keywords: "计算机科学，CS，知识库，知识体系"
-description: "专注于计算机科学相关领域的知识库"
-# 致力于打造全网最大的计算机相关知识库
-# 围绕知识体系建立计算机知识库
+description: "计算机知识库"
 
 markdown: kramdown
 kramdown:
@@ -40,13 +38,14 @@ sass:
   sass_dir: _scss
   style: :compressed
 
-#============================= more settings =============================#
+#===================== more settings =====================#
 
 repourl: https://github.com/jinsyin/knowledge-base
 copyright: Powered by Jinsyin
 
 # Site Language
-lang: "zh-cmn-Hans" # "zh-cmn-Hans" => 简体中文; "zh-cmn-Hant" => 繁体中文; "en" => English
+# "zh-cmn-Hans" => 简体中文; "zh-cmn-Hant" => 繁体中文; "en" => English
+lang: "zh-cmn-Hans"
 
 author:
   name: Jinsyin

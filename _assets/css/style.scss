@@ -106,3 +106,18 @@ thead {
     padding-left: 35px;
     padding-right: 35px;
 }
+
+.hero-text h1 {
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    margin-bottom: 15px;
+    align-items: center;
+    align-content: center;
+}
+
+.hero-text p {
+    letter-spacing: 15px;
+    color: rgba(255, 255, 255, 0.5)
+}
