@@ -21,7 +21,7 @@ kramdown:
 # Building settings
 permalink: pretty
 
-include: ["_assets", ".images"]
+include: [".assets", ".images"]
 
 exclude:
   - README.md
