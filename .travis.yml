@@ -1,0 +1,46 @@
+language: ruby
+rvm:
+  - 2.6.3
+
+install:
+  - bundle install
+
+script:
+  - bundle exec jekyll build
+  # - bundle exec htmlproofer ./_site # check
+
+# branch whitelist, only for GitHub Pages
+branches:
+  only:
+  - master     # test the master branch
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev
+
+sudo: false # route your build to the container-based infrastructure for a faster build
+
+cache: bundler # caching bundler gem packages will speed up build
+
+# Optional: disable email notifications about the outcome of your builds
+notifications:
+  email: false
+
+# Push _site directory to another repository
+deploy:
+  provider: pages
+  local_dir: _site
+  repo: jinsyin/jinsyin.github.io
+  target_branch: master
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  name: "Knowledge Base"
+  skip_cleanup: true
+  keep_history: false          # Push force
+  committer_from_gh: true
+  on:
+    branch: master             # Source branch
