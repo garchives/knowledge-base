@@ -1,0 +1,10 @@
+Sitemap: https://githome.io/sitemap.xml
+Sitemap: https://githome.io/computer-language/sitemap.xml
+Sitemap: https://githome.io/clang/sitemap.xml
+Sitemap: https://githome.io/golang/sitemap.xml
+Sitemap: https://githome.io/python/sitemap.xml
+Sitemap: https://githome.io/scala/sitemap.xml
+Sitemap: https://githome.io/java/sitemap.xml
+Sitemap: https://githome.io/shell/sitemap.xml
+Sitemap: https://githome.io/procfs/sitemap.xml
+Sitemap: https://githome.io/git/sitemap.xml
