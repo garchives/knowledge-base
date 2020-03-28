@@ -1,10 +1,8 @@
 url: https://githome.io
-baseurl: "/knowledge-base" # It's the default
 
 name: 知识库
-name_en: Knowledge Base
-title: 知识库 - Knowledge Base
-keywords: "计算机科学，CS，知识库，知识体系"
+title: 知识库 —— 计算机知识库 GitHome.io
+keywords: "计算机，知识库，知识体系，Knowledge Base"
 description: "计算机知识库"
 
 markdown: kramdown
