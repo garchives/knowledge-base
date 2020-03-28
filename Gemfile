@@ -46,6 +46,7 @@ gem 'html-proofer'
 
 group :jekyll_plugins do
   gem 'jekyll-commonmark-ghpages'
+  gem 'jekyll-redirect-from'
 end
 
 gem "nokogiri", ">= 1.10.8"

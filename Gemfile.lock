@@ -260,6 +260,7 @@ DEPENDENCIES
   github-pages (= 202)
   html-proofer
   jekyll-commonmark-ghpages
+  jekyll-redirect-from
   nokogiri (>= 1.10.8)
 
 BUNDLED WITH
