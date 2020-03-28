@@ -7,6 +7,7 @@ install:
 
 script:
   - bundle exec jekyll build
+  - touch ./_site/.nojekyll
   # - bundle exec htmlproofer ./_site # check
 
 # branch whitelist, only for GitHub Pages
@@ -38,7 +39,8 @@ deploy:
   repo: jinsyin/jinsyin.github.io
   target_branch: master
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  name: "Knowledge Base"
+  name: Knowledge Base
+  project_name: knowledge-base
   skip_cleanup: true
   keep_history: false          # Push force
   committer_from_gh: true
